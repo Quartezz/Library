@@ -3,6 +3,7 @@
     --darkblue1: #2d4059;
     --darkblue2: #3a4750;
     --white: #f3f3f3;
+    --light-green: #9fff9c;
 }
 
 html {
@@ -55,6 +56,96 @@ header h2 {
     margin-right: 300px;
     color: var(--white);
 }
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: 0.2s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    margin: 2rem;
+}
+
+.container {
+    width: 400px;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: 0.5s ease;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 5px 5px 40px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.container h1 {
+    color: var(--blue);
+    text-align: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 3rem;
+    font-weight: 100;
+    margin: -1rem;
+}
+
+.container .close {
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+    color: var(--blue);
+    transform: rotate(45deg);
+}
+
+.container input[type="text"],
+.container input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f7f7f7;
+    font-size: 1rem;
+    outline: 0;
+}
+
+.container .is-read {
+    display: flex;
+    gap: 15px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    accent-color: var(--white);
+}
+
+.container input[type="submit"] {
+    background-color: var(--blue);
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
 
 footer {
     display: flex;
