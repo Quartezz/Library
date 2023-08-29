@@ -1,0 +1,70 @@
+:root {
+    --blue: #2185d5;
+    --darkblue1: #2d4059;
+    --darkblue2: #3a4750;
+    --white: #f3f3f3;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--darkblue1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--blue);
+    position: absolute;
+    top: 0%;
+}
+
+header h2 {
+    padding-left: 300px;
+    color: var(--white);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.btn-add-book {
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--darkblue1);
+    transition: 0.2s ease;
+    width: 35px;
+    height: 35px;
+    font-size: 1.8rem;
+    margin-right: 300px;
+    color: var(--white);
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 5vh;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white);
+}
