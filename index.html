@@ -14,7 +14,33 @@
         <h2>Library</h2>
         <button class="btn btn-add-book" id="new-book" style="transform: rotate(0deg);">+</button>
     </header>
-
+    <div class="overlay"></div>
+    <div class="bookscard"></div>
+    <div class="modal">
+        <div class="container">
+            <h1>New Book</h1>
+            <div class="close">+</div>
+            <form action="/" id="form" method="get">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title"
+                placeholder="Title" required maxlength="100">
+                <br>
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" placeholder="Author" required maxlength="100">
+                <br>
+                <label for="pages">Pages</label>
+                <input type="text" id="pages" name="pages" placeholder="Pages" required maxlength="10000">
+                <br>
+                <div class="is-read">
+                <label for="read">Have You read the book?</label>
+                <br>
+                <input type="checkbox" class="checkbox" id="isRead">
+                </div>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
     <footer>Copyright © kamilmachel</footer>
     <script type="text/javascript" src="script.js"></script>
 </body>
