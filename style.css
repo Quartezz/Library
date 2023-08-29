@@ -69,7 +69,7 @@ header h2 {
     pointer-events: none;
 }
 
-.bookshelf {
+.bookscard {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
@@ -77,6 +77,7 @@ header h2 {
     top: 12%;
     left: 15%;
     margin: 2rem;
+    flex-direction: row;
 }
 
 .container {
@@ -113,25 +114,13 @@ header h2 {
 }
 
 .container input[type="text"],
-.container input[type="number"] {
+.container input[type="number"], select {
     display: block;
     width: 100%;
     padding: 1rem;
     background-color: #f7f7f7;
     font-size: 1rem;
     outline: 0;
-}
-
-.container .is-read {
-    display: flex;
-    gap: 15px;
-}
-
-.checkbox {
-    width: 20px;
-    height: 20px;
-    margin-top: 4px;
-    accent-color: var(--white);
 }
 
 .container input[type="submit"] {
@@ -146,6 +135,77 @@ header h2 {
     color: var(--white);
 }
 
+.container .close:hover {
+    color: rgb(36, 113, 177);
+    transition: 0.3 ease;
+}
+
+.book {
+    width: 250px;
+    height: 300px;
+    border-radius: 5px;
+    margin: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    background: white;
+  }
+
+.book:hover {
+    box-shadow: 3px 3px 30px 10px rgba(0, 0, 0, 0.15);
+  }
+
+.book h2 {
+    background: var(--blue);
+    color: var(--white);
+    padding: 0.5rem 0;
+    margin: -0.5rem 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+.book h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+.book h3 {
+    margin: 1rem;
+  }
+  
+.book .trash,
+.book .update {
+    outline: none;
+    border: none;
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+.book .update {
+    background: rgb(35, 255, 171);
+    color: var(--blue);
+    position: relative;
+    top: 40px;
+  }
+  
+.book .trash {
+    background: var(--blue);
+    color: var(--white);
+    position: relative;
+    top: 40px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+@media screen and (max-width: 360px) {
+    #modal #modal-container {
+        width: 260px;
+        padding-top: 10px;
+    }
+}
 
 footer {
     display: flex;
