@@ -17,7 +17,7 @@
     <div class="overlay"></div>
     <div class="bookscard"></div>
     <div class="modal">
-        <div class="container">
+        <div class="container" id="modal-container">
             <h1>New Book</h1>
             <div class="close">+</div>
             <form action="/" id="form" method="get">
@@ -31,11 +31,12 @@
                 <label for="pages">Pages</label>
                 <input type="text" id="pages" name="pages" placeholder="Pages" required maxlength="10000">
                 <br>
-                <div class="is-read">
                 <label for="read">Have You read the book?</label>
                 <br>
-                <input type="checkbox" class="checkbox" id="isRead">
-                </div>
+                <select name="read" id="read">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
                 <br>
                 <input type="submit" value="Submit">
             </form>
